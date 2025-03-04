@@ -15,20 +15,22 @@ const Nav = ({ openNav }: Props) => {
   useEffect(() => {
     const handler = () => {
       if (window.scrollY >= 90) setNavBg(true);
-      if (window.screenY < 90) setNavBg(false);
+      if (window.scrollY < 90) setNavBg(false);
     };
 
     window.addEventListener("scroll", handler);
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
-  const bg_style = navBg ? "bg-[#1b1b1b] shadow-md " : "";
+  const bg_style = navBg ? "bg-[#000510] shadow-md " : "";
 
   return (
     <div
       className={`flex ${bg_style} items-center justify-between h-[12vh] fixed z-[100] w-full mx-auto transition-all duration-200`}
     >
-      <h1 className="text-2xl text-white font-bold ml-8 md:ml-16">ImgGen.</h1>
+      <h1 className="text-xl text-[#debc89df] font-bold ml-8 md:ml-16">
+        ImgGen.
+      </h1>
       <div className="md:flex items-center space-x-10 hidden">
         {/* navlinks */}
         {navlinks.map((link) => (
