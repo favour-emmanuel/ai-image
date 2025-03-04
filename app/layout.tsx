@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import { Weight } from "lucide-react";
+import ResponsiveNav from "@/components/Home/Navbar/ResponsiveNav";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -30,7 +31,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.className} bg-[#0d0d0d] antialiased`}>
+      <body className={`${font.className} bg-[#000510] antialiased`}>
+        <ResponsiveNav />
         {children}
       </body>
     </html>

@@ -1,11 +1,9 @@
-import { Button } from "@/components/ui/button";
-import React from "react";
+import Home from "../components/Home/Home";
 
 const HomePage = () => {
   return (
-    <div className="p-5">
-      <Button>Shadcn Ui</Button>
-      <Button variant={"destructive"}>Shadcn Ui</Button>
+    <div>
+      <Home />
     </div>
   );
 };
