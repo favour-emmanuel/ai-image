@@ -1,14 +1,14 @@
 type Props = {
   heading: string;
+  subText: string;
 };
 
-const SectionHeading = ({ heading }: Props) => {
+const SectionHeading = ({ heading, subText }: Props) => {
   return (
     <div className="w-[80%] m-auto">
-      <h1 className="text-2xl lg:text-3xl font-black text-white">{heading}</h1>
-      <p className="text-sm sm:text-base md:text-lg font-medium mt-2 text-gray-200">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-        voluptas quaerat aliquam nesciunt praesentium itaque!
+      <h1 className="text-3xl lg:text-4xl font-black text-white">{heading}</h1>
+      <p className="text-sm w-full lg:max-w-[48rem] sm:text-base md:text-lg font-medium mt-2 text-gray-200">
+        {subText}
       </p>
     </div>
   );

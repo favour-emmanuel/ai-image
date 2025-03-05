@@ -76,7 +76,7 @@ const Hero = () => {
           </Button>
         </div>
         {/* tags */}
-        <div className="flex items-center mt-6 space-x-4 flex-wrap py-2">
+        <div className="flex items-center justify-center mt-6 space-x-4 flex-wrap py-2 lg:space-y-0 space-y-3">
           <p>Popular Tag: </p>
           <Button variant={"secondary"}>Creative</Button>
           <Button variant={"secondary"}>Hyperreality</Button>
