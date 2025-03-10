@@ -1,7 +1,9 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { navlinks } from "@/constant/constant";
 import { MenuIcon, Search, ShoppingCart } from "lucide-react";
+
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
@@ -26,13 +28,12 @@ const Nav = ({ openNav }: Props) => {
 
   return (
     <div
-      className={`flex ${bg_style} items-center justify-between h-[12vh] fixed z-[100] w-full mx-auto transition-all duration-200`}
+      className={`flex ${bg_style} items-center justify-between h-[12vh] fixed z-[100] w-full px-8 md:px-16 transition-all duration-200`}
     >
-      <h1 className="text-xl text-[#debc89df] font-bold ml-8 md:ml-16">
-        ImgGen.
-      </h1>
-      <div className="md:flex items-center space-x-10 hidden">
-        {/* navlinks */}
+      <h1 className="text-xl text-[#debc89df] font-bold">ImgGen.</h1>
+
+      {/* Centered navigation */}
+      <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-10">
         {navlinks.map((link) => (
           <Link
             key={link.id}
@@ -43,13 +44,29 @@ const Nav = ({ openNav }: Props) => {
           </Link>
         ))}
       </div>
-      {/* buttons */}
-      <div className="flex items-center space-x-5 md:space-x-8 text-white mr-8 md:mr-16">
-        <ShoppingCart className="cursor-pointer h-6 w-6" />
-        <Search className="cursor-pointer h-6 w-6" />
+
+      {/* Right-side buttons */}
+      <div className="flex items-center space-x-5 md:space-x-8">
+        <Link href={"/signUp"}>
+          <Button
+            variant={"secondary"}
+            className="bg-cyan-500 hover:bg-gray-100"
+          >
+            Sign Up
+          </Button>
+        </Link>
+        <Link href={"/login"}>
+          <Button
+            variant={"link"}
+            className="text-white border border-cyan-500 cursor-pointer"
+            size={"lg"}
+          >
+            Login
+          </Button>
+        </Link>
         <MenuIcon
           onClick={openNav}
-          className="cursor-pointer h-6 w-6 md:hidden"
+          className="cursor-pointer h-6 w-5 md:hidden text-orange-200"
         />
       </div>
     </div>
