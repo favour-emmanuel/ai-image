@@ -54,7 +54,7 @@ const Hero = () => {
       <div className="relative z-10 text-white flex flex-col items-center justify-center">
         <h1
           data-aos="fade-up"
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center bg-gradient-to-r from-orange-300 to-cyan-500 bg-clip-text text-transparent"
+          className="text-3xl sm:text-4xl pb-2 md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center bg-gradient-to-r from-orange-300 to-cyan-500 bg-clip-text text-transparent"
         >
           Create Beautiful Image with <br /> Artificial Intelligence
         </h1>

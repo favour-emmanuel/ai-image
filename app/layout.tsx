@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
+
 import { Weight } from "lucide-react";
 import ResponsiveNav from "@/components/Home/Navbar/ResponsiveNav";
 import { Toaster } from "@/components/ui/sonner";

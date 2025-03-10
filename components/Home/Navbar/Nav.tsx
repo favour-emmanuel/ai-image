@@ -30,7 +30,7 @@ const Nav = ({ openNav }: Props) => {
     <div
       className={`flex ${bg_style} items-center justify-between h-[12vh] fixed z-[100] w-full px-8 md:px-16 transition-all duration-200`}
     >
-      <h1 className="text-xl text-[#debc89df] font-bold">ImgGen.</h1>
+      <h1 className="text-xl text-[#debc89df]  font-bold">ImgGen.</h1>
 
       {/* Centered navigation */}
       <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-10">
